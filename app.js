@@ -238,6 +238,11 @@ function getQuestion(file) {
         } else if (line.includes('<td class="info_value">Standard level</td>')) {
             level = 'sl';
         }
+        if (line.includes('<td class="info_value">HL</td>')) {
+            level = 'hl';
+        } else if (line.includes('<td class="info_value">SL</td>')) {
+            level = 'sl';
+        }
         else if (line.includes('<td class="info_value">SL and HL</td>')) {
             level = 'both';
         }
